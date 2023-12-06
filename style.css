@@ -4,6 +4,20 @@
  * Licensed under  (Creative Commons 3.0)
  */
 
+ :root {
+    --black: #171321;
+    --hotmag: #172eff;
+    --magenta: #108fe3;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+  }
+
+  canvas {
+    position: absolute;
+  }
 @font-face {
     font-family: "Flaticon";
     src: url("fonts/Flaticon.eot");
@@ -2084,6 +2098,9 @@ RESPONSIVE
     #header.affix {
         position: relative;
     }
+    canvas {
+        display: none;
+    }
 }
 
 @media(min-width:768px) {
@@ -2111,6 +2128,9 @@ RESPONSIVE
   .overlay{
      background: url(images/pattern.png) repeat center center rgba(0, 0, 0, 0.7);
   }
+  canvas {
+    display: none;
+  }
 }
 
 @media(max-width:998px) {
@@ -2126,6 +2146,9 @@ RESPONSIVE
     }
   .overlay{
      background: url(images/pattern.png) repeat center center rgba(0, 0, 0, 0.7);
+  }
+  canvas {
+    display: none;
   }
 }
 
@@ -2146,6 +2169,9 @@ RESPONSIVE
     }
     .client-box img {
         max-width: 240px;
+    }
+    canvas {
+        display: none;
     }
 }
 

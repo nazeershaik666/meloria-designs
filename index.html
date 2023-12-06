@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="./snow-style.css">
+    <script src="./pure-snow.js" defer></script>
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
@@ -37,7 +39,7 @@
 
 </head>
 <body class="left-menu">  
-    
+    <div id="snow" data-count="500"></div>
     <div class="menu-wrapper">
         <div class="mobile-menu">
             <nav class="navbar navbar-inverse">
@@ -157,7 +159,7 @@
                                <ul class="sub-menu center-content">
                                    <!-- <li><a href="#">Menu Example 01 <i class="fa fa-angle-right"></i></a> 
                                         <div class="subsub-menu-wrapper">  
-                                        <!--    <ul class="subsub-menu center-content">
+                                        <--    <ul class="subsub-menu center-content">
                                                 <li><a href="#">Menu Example 01</a></li>
                                                 <li><a href="#">Menu Example 02</a></li>
                                                 <li><a href="#">Menu Example 03</a></li>
@@ -165,9 +167,9 @@
                                             </ul> 
                                         </div>
                                     </li> 
-                                 <!--   <li><a href="#">Menu Example 02 <i class="fa fa-angle-right"></i></a> 
+                                --   <li><a href="#">Menu Example 02 <i class="fa fa-angle-right"></i></a> 
                                         <div class="subsub-menu-wrapper">  
-                                         <!--   <ul class="subsub-menu center-content">
+                                            <ul class="subsub-menu center-content">
                                                 <li><a href="#">Menu Example 01</a></li>
                                                 <li><a href="#">Menu Example 02</a></li>
                                                 <li><a href="#">Menu Example 03</a></li>
@@ -179,7 +181,7 @@
                                     </li> 
                                     <li><a href="#">Menu Example 03 <i class="fa fa-angle-right"></i></a> 
                                         <div class="subsub-menu-wrapper">  
-                                          <!--  <ul class="subsub-menu center-content">
+                                            <ul class="subsub-menu center-content">
                                                 <li><a href="#">Menu Example 01</a></li>
                                                 <li><a href="#">Menu Example 02</a></li>
                                                 <li><a href="#">Menu Example 03</a></li>
@@ -724,12 +726,14 @@
         </section>
 
         <section class="section lb">
+            <canvas id="canvas"></canvas>
             <div class="container">
+                
                 <div class="section-title text-center">
                     <h3>Our Team</h3>
                     <p></p>
                 </div><!-- end title -->
-
+                
                 <div class="row text-center">
                     <div class="col-lg-4 col-md-12">
                         <div class="blog-box">
@@ -750,7 +754,7 @@
                                     <li></li>
                                     <li></li>
                                 </ul>
-                            </div><!-- end post-meta -->
+                            </div>  end post-meta -->
                         </div><!-- end blog -->
                     </div><!-- end col -->
 
@@ -772,7 +776,7 @@
                                     <li></li>
                                     <li></li>
                                 </ul>
-                            </div><!-- end post-meta -->
+                            </div>end post-meta -->
                         </div><!-- end blog -->
                     </div><!-- end col -->
 			
@@ -794,7 +798,7 @@
                                     <li></li>
                                     <li></li>
                                 </ul>
-                            </div><!-- end post-meta -->
+                            </div> end post-meta -->
                         </div><!-- end blog -->
                     </div><!-- end col -->
                 </div><!-- end row -->
@@ -912,7 +916,8 @@
     <!-- VIDEO BG PLUGINS -->
     <script src="videos/libs/swfobject.js"></script> 
     <script src="videos/libs/modernizr.video.js"></script> 
-    <script src="videos/libs/video_background.js"></script> 
+    <script src="videos/libs/video_background.js"></script>
+    <script src="particles.js"></script>
     <script>
         jQuery(document).ready(function($) {
             var Video_back = new video_background($("#home"), { 
