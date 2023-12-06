@@ -88,9 +88,6 @@
 .flaticon-monitor:before {
     content: "\f10b";
 }
-*{
-    scrollbar-width: thin !important;
-}
 body {
     background-color: black;
     color: #aeaeae;
