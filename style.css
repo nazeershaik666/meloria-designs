@@ -97,7 +97,6 @@ body {
     font-size: 15px;
     line-height: 1.6;
     font-family: "Poppins", serif;
-    scrollbar-width: thin !important;
 }
 
 a {
@@ -201,8 +200,7 @@ MENU
     z-index: 10;
     overflow-x: hidden;
     min-width: 260px;
-    overflow-y: auto;
-    scrollbar-width: thin !important;
+    overflow-y: auto
 }
 
 .subsub-menu-wrapper,
@@ -697,7 +695,6 @@ SECTIONS
 
 .section.noover {
     overflow: visible !important;
-    scrollbar-width: thin;
 }
 
 .section-title {
@@ -1405,7 +1402,6 @@ MODULES
     width: 0%;
     height: 100%;
     overflow: visible;
-    scrollbar-width: thin;
     font-size: 12px;
     line-height: 20px;
     color: #ffffff;
@@ -1420,7 +1416,6 @@ MODULES
 
 .progress {
     overflow: initial;
-    scrollbar-width: thin;
     position: relative;
 }
 
@@ -1450,7 +1445,6 @@ MODULES
     display: block;
     font-size: 14px;
     overflow: visible;
-    scrollbar-width: thin;
     text-align: center;
     position: absolute;
     right: 0;
