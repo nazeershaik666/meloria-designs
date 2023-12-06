@@ -88,13 +88,16 @@
 .flaticon-monitor:before {
     content: "\f10b";
 }
-
+*{
+    scrollbar-width: thin !important;
+}
 body {
     background-color: black;
     color: #aeaeae;
     font-size: 15px;
     line-height: 1.6;
     font-family: "Poppins", serif;
+    scrollbar-width: thin !important;
 }
 
 a {
@@ -199,7 +202,7 @@ MENU
     overflow-x: hidden;
     min-width: 260px;
     overflow-y: auto;
-    scrollbar-width: thin;
+    scrollbar-width: thin !important;
 }
 
 .subsub-menu-wrapper,
