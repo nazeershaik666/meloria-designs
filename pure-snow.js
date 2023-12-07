@@ -46,11 +46,26 @@ function generateSnow(snowDensity = 200) {
   const snowWrapper = document.getElementById('snow');
   snowWrapper.innerHTML = '';
   for (let i = 0; i < snowDensity; i++) {
+    let flake = document.createElement('div');
+    flake.className = "snowflake";
+    // Exclude the 'particles' section if necessary
+    // (You might need to adjust the logic based on the layout of your page)
+    if (!isInParticlesSection(flake)) {
+      snowWrapper.appendChild(flake);
+    }
+  }
+}
+
+/* function generateSnow(snowDensity = 200) {
+  snowDensity -= 1;
+  const snowWrapper = document.getElementById('snow');
+  snowWrapper.innerHTML = '';
+  for (let i = 0; i < snowDensity; i++) {
     let board = document.createElement('div');
     board.className = "snowflake";
     snowWrapper.appendChild(board);
   }
-}
+} */
 
 function getOrCreateCSSElement() {
   let cssElement = document.getElementById("psjs-css");
@@ -126,13 +141,24 @@ function createSnow() {
   getSnowAttributes();
   generateSnowCSS(snowflakesCount);
   generateSnow(snowflakesCount);
+  
 };
 
+function isInParticlesSection(flake) {
+  const particlesSection = document.querySelector('.particles');
+  if (!particlesSection) return false;
+
+  const rect = particlesSection.getBoundingClientRect();
+  // Adjust these conditions based on your requirement
+  return (flake.offsetTop >= rect.top && flake.offsetTop <= rect.bottom &&
+          flake.offsetLeft >= rect.left && flake.offsetLeft <= rect.right);
+}
 
 window.addEventListener('resize', function () {
   updatePageHeight();
   createSnow(); // Recreate the snow effect
 });
+
 
 // export createSnow function if using node or CommonJS environment
 if (typeof module !== 'undefined') {

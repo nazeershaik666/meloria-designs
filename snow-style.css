@@ -9,3 +9,8 @@
   border-radius: 50%;
   filter: drop-shadow(0 0 10px white);
 }
+
+.particles {
+  position: relative;
+  z-index: 999999; /* Higher z-index to ensure it's above snowflakes */ 
+}
